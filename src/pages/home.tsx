@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./home.css";
 
 type Product = {
   id: number;
@@ -20,54 +21,35 @@ export default function Home() {
   };
 
   return (
-    <div style={{ fontFamily: "sans-serif", padding: "2rem" }}>
+    <div className="home">
       <h1>🛒 ShopCart 商城</h1>
       <p>精選 3 件商品：</p>
 
-      <div style={{ display: "flex", gap: "1.5rem" }}>
+      <div className="product-list">
         {products.map((p) => (
-          <div
-            key={p.id}
-            style={{
-              border: "1px solid #ccc",
-              borderRadius: "10px",
-              padding: "1rem",
-              width: "180px",
-              textAlign: "center",
-            }}
-          >
+          <div key={p.id} className="product-card">
             <h3>{p.name}</h3>
             <p>${p.price}</p>
-            <button
-              onClick={() => addToCart(p)}
-              style={{
-                background: "#2563eb",
-                color: "#fff",
-                border: "none",
-                padding: "6px 10px",
-                borderRadius: "8px",
-                cursor: "pointer",
-              }}
-            >
-              加入購物車
-            </button>
+            <button onClick={() => addToCart(p)}>加入購物車</button>
           </div>
         ))}
       </div>
 
-      <hr style={{ margin: "2rem 0" }} />
-      <h2>🧺 購物車 ({cart.length} 件)</h2>
-      {cart.length === 0 ? (
-        <p>尚未選購任何商品</p>
-      ) : (
-        <ul>
-          {cart.map((c) => (
-            <li key={c.id}>
-              {c.name} - ${c.price}
-            </li>
-          ))}
-        </ul>
-      )}
+      <hr />
+      <div className="cart-section">
+        <h2>🧺 購物車 ({cart.length} 件)</h2>
+        {cart.length === 0 ? (
+          <p>尚未選購任何商品</p>
+        ) : (
+          <ul>
+            {cart.map((c) => (
+              <li key={c.id}>
+                {c.name} - ${c.price}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,35 @@
+.home {
+  font-family: sans-serif;
+  padding: 2rem;
+}
+
+.product-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 180px;
+  text-align: center;
+}
+
+.product-card button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background: #1d4ed8;
+}
+
+.cart-section {
+  margin-top: 2rem;
+}
