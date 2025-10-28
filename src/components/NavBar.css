@@ -14,6 +14,31 @@
 .cart-count {
   position: absolute;
   top: -8px;
+  right: 0px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.nav-right {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  z-index: 1000; /* 讓它永遠在最上層 */
+}
+
+.cart-link {
+  position: relative;
+  font-size: 18px; /* 放大一點也可以 */
+  color: #333;
+  text-decoration: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
   right: -10px;
   background: red;
   color: white;
@@ -21,3 +46,24 @@
   padding: 2px 6px;
   border-radius: 50%;
 }
+
+.nav-center {
+  display: flex;
+  gap: 20px; /* ← 控制間距，數字越大空越寬 */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 12px; /* ← 內邊距，讓點擊範圍更好看 */
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-center a:hover {
+  background: #e5e7eb;
+}
+    

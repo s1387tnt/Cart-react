@@ -45,14 +45,6 @@ export default function Shop() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-
-          {/* ✅ 購物車連結（正式導向 /cart 頁面） */}
-          <Link to="/cart" className="cart-icon">
-            🛒
-            {cart.items.length > 0 && (
-              <span className="badge">{cart.items.length}</span>
-            )}
-          </Link>
         </header>
 
         {/* 商品卡片 */}
