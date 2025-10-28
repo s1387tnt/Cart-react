@@ -3,6 +3,8 @@ import { useCart } from "../context/CartContext";
 import { products } from "../data/products";
 import { Link } from "react-router-dom";
 import "../App.css";
+import type { CartItem } from "../context/CartContext";
+
 
 export default function Shop() {
   const cart = useCart();
@@ -55,9 +57,14 @@ export default function Shop() {
               <h3>{p.name}</h3>
               <p className="desc">{p.desc}</p>
               <p className="price">${p.price}</p>
-              <button onClick={() => cart.addItem({ ...p, quantity: 1 })}>
-                加入購物車
-              </button>
+              <button
+  onClick={() =>
+    cart.addItem({ ...p, quantity: 1 } as unknown as Omit<CartItem, "quantity">)
+  }
+>
+  加入購物車
+</button>
+
             </div>
           ))}
         </div>
