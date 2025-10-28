@@ -1,35 +1,61 @@
-.home {
-  font-family: sans-serif;
-  padding: 2rem;
+.home-container {
+  padding: 40px;
+  font-family: "Microsoft JhengHei", sans-serif;
+  background: #f8faff;
 }
 
-.product-list {
+.hero {
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin-bottom: 40px;
 }
 
-.product-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  width: 180px;
-  text-align: center;
+.hero-text h1 {
+  color: #0078ff;
+  font-size: 2rem;
 }
 
-.product-card button {
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  padding: 6px 10px;
+.hero-text .brand {
+  font-weight: bold;
+  color: #0056cc;
+}
+
+.btn-primary {
+  background: #0078ff;
+  color: white;
+  padding: 10px 20px;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
-.product-card button:hover {
-  background: #1d4ed8;
+.btn-primary:hover {
+  background: #005ed6;
+  transform: scale(1.05);
 }
 
-.cart-section {
-  margin-top: 2rem;
+.hero-img img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }

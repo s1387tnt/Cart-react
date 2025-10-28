@@ -6,7 +6,10 @@ type CartItem = {
   name: string;
   price: number;
   quantity: number;
+  img: string;      // ✅ 新增圖片
+  desc?: string;    // ✅ 可選的商品描述
 };
+
 
 type CartContextType = {
   items: CartItem[];
